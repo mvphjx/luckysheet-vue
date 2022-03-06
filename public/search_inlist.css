@@ -1,0 +1,109 @@
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    height: 105px;
+    width: 730px;
+    margin: 15px 0px 0px 10px;
+}
+
+.panel .text-label {
+    font-size: 14px;
+    margin: 5px;
+}
+
+.panel .panel-row {
+    margin: 5px;
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+}
+
+.panel .panel-row .panel-item {
+    margin: 5px;
+    line-height: 25px;
+}
+
+.panel .panel-row .panel-input {
+
+}
+.panel .panel-row .panel-item .el-select {
+    width: 250px;
+}
+.panel .panel-row .panel-item .panel-item-count {
+    width: 250px;
+    border-bottom: 1px solid #ccc;
+    line-height: 25px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 335px;
+    width: 710px;
+    border-top: 1px dashed #ccc;
+    margin: 0px 20px 0px 20px;
+    padding: 15px 0px 15px 0px;
+}
+
+.content .text-label {
+    line-height: 30px;
+    font-size: 14px;
+    color: #6D898F;
+}
+
+.content .tool {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.content .tool .left {
+
+}
+
+.content .tool .right {
+
+}
+
+.content .table {
+
+}
+
+.el-button--mini, .el-button--small {
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.el-radio {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#luckysheet {
+    margin: 0px;
+    padding: 0px;
+    /*width: 730px;*/
+    height: 300px;
+}
+
+.luckysheet-print-viewList{
+    display: none;
+}
+.luckysheet-sta-content{
+    display: none;
+}
+#luckysheet-wa-calculate{
+    height: 0px;
+}
+#luckysheet-wa-calculate div{
+    display: none;
+}
+.tool .right .el-switch .el-switch__label--right{
+    margin-left: 0px;
+}
+.tool .right .el-switch .el-switch__label--right span {
+    line-height: 20px;
+}
+
