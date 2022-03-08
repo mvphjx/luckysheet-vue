@@ -100,17 +100,13 @@ import luckyExcel from 'luckyexcel'
 
 //统一异常处理
 window.onerror = function (message, source, lineno, colno, error) {
-  console.log('捕获到异常：', arguments);
+  console.warn('捕获到异常：', arguments);
   //alert(error);
 }
 window.addEventListener("unhandledrejection", function (e) {
-  console.log('捕获到异常：', arguments);
+  console.warn('捕获到异常：', arguments);
   //alert(e.reason);
 });
-Vue.config.errorHandler = function (error, vm) {
-  console.log('VUE 抛出全局异常', error);
-  //alert(error);
-};
 
 var supportColsConfig = {
   "TP_CARD_VIEW": [{
@@ -635,6 +631,7 @@ export default {
     if (!supportColsConfig[this.tableName]) {
       throw "当前列表不支持列表中检索:" + this.tableName;
     }
+    this.colOptions = supportColsConfig[this.tableName];
     this.loadSheet();
     //监听用户粘贴操作
     document.addEventListener('paste', (ev) => {

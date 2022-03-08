@@ -57,4 +57,15 @@ import '@/../public/search_inlist.css'
 
 ##  组件介绍  
 
-功能：导入列表，进行检索
+功能：导入列表，生成检索条件
+
+
+##  异常处理
+考虑到不同项目弹窗提示存在差异，组件中的异常、错误会通过 throw 抛出，需要调用者进行捕获，根据自己的业务进行处理。
+```javascript
+//统一异常处理
+Vue.config.errorHandler = function (error, vm) {
+console.warn('VUE 抛出全局异常', error);
+alert(error);
+};
+```

@@ -8,3 +8,8 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+//统一异常处理
+Vue.config.errorHandler = function (error, vm) {
+  console.warn('VUE 抛出全局异常', error);
+  alert(error);
+};
