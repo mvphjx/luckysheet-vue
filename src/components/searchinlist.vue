@@ -545,7 +545,11 @@ export default {
         }
         let rowData = selectJson[index];
         if (rowData[gridColKey]) {
-          values.push(rowData[gridColKey].trim())
+          var value = rowData[gridColKey];
+          if (value.trim) {
+            value = value.trim();
+          }
+          values.push(value);
         }
       }
       if (values.length === 0) {
