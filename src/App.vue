@@ -14,8 +14,11 @@ export default {
   },
   methods: {
     getWhereParam() {
-      var param = this.$refs.searchInList.getWhereParam();
-      console.log(param)
+      const param = this.$refs.searchInList.getWhereParam()
+      this.$notify.success({
+        title: '获取检索参数',
+        message: JSON.stringify(param)
+      })
     }
   }
 }

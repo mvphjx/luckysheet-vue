@@ -475,6 +475,9 @@ export default {
           updated: (operate) => {
             if (operate.type == "delRC") {
               this.updateData();
+            }else if(operate.type =='datachange'){
+              //fix 手动修改表格数据  触发数据更新
+              this.updateData();
             }
           },
           rowTitleCellRenderBefore: (options) => {
@@ -545,7 +548,11 @@ export default {
         }
         let rowData = selectJson[index];
         if (rowData[gridColKey]) {
-          values.push(rowData[gridColKey].trim())
+          var value = rowData[gridColKey];
+          if (value.trim) {
+            value = value.trim();
+          }
+          values.push(value);
         }
       }
       if (values.length === 0) {
