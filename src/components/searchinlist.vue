@@ -1,5 +1,5 @@
 <template>
-  <div id="SearchInListApp" v-loading="loading">
+  <div id="SearchInListApp" class="SearchInListApp" v-loading="loading">
     <div class="panel">
       <div class="panel-row">
         <div class="panel-item">
@@ -313,7 +313,7 @@ export default {
       var fileInputId = "in_list_file_input_id";
       //反复上传同一个文件，不会触发change，所以需要移除掉
       $("#" + fileInputId).remove();
-      $("body").append('<input id="' + fileInputId + '" type="file" multiple accept="*" style="display:none;">');
+      $("body").append('<input id="' + fileInputId + '" type="file" multiple accept=".txt,.cas,.xlsx"  style="display:none;">');
       var $file = $("#" + fileInputId);
       //完成选择文件
       $file.change(function (evt) {
